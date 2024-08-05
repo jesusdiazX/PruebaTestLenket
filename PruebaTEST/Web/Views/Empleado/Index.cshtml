@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Lista de Empleados";
+}
+
+<h2>Lista de Empleados</h2>
+<div class="row">
+    <div class="panel">
+        <div class="panel-body">
+            <div id="id" class="table-responsive">
+                <button class="btn btn-primary" onclick="OpenModal()">Nuevo</button>
+                <table id="tblEmpleado" class=" table table-responsive table-striped">
+                    <thead>
+                        <tr >
+                            <th >ID.</th>
+                            <th >Numero Nomina.</th>
+                            <th class="">Nombre</th>
+                            <th class="">Apellido Paterno</th>
+                            <th class="">Apellido Materno</th>
+                            <th class="">Opciones</th>
+
+                        </tr>
+
+                    </thead>
+                    <tbody id="tbody"></tbody>
+
+
+
+
+
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="modal fade" id="empleadomodal" tabindex="-1" role="dialog" aria-labelledby="empleadomodal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" >Empleado</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="Id" name="Id" value="" />
+                <input type="hidden" id="numeroNom" name="numeroNom" value="" />
+                <div class="form-group">
+                    <label class="form-group"> Nombre</label>
+                    <input id="Nombre" type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label class="form-group"> Apellido Paterno</label>
+                    <input id="appat" type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label class="form-group"> Apellido Materno</label>
+                    <input id="apmat" type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label class="form-group"> Estado</label>
+                    <select id="estado" class="form-control">
+                        <option value="value">Seleccione..</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="Gurarda()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="~/Scripts/PaginasJS/Empleados.js"></script>
